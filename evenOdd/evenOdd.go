@@ -11,5 +11,5 @@ func main() {
 			sum -= i
 		}
 	}
-	fmt.Printf("the difference of even and odd is: %d \n", sum)
+	fmt.Printf("Result : %d \n", sum)
 }
