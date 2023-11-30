@@ -5,19 +5,18 @@ import (
 	"fmt"
 )
 
-func divideWithRemainder(x, y int) (quotient, remainder int, err error) {
-	if y == 0 {
-		return 0, 0, errors.New("Cannot divide by zero.")
-	} else {
-		return x / y, x % y, nil
-	}
+func divideWithRemainder(q int, d int) (int, int, error) {
+	quotient := q / d
+	remainder := q % d
+	return quotient, remainder, errors.New("This is error")
 }
 
 func main() {
-	quotient, remainder, err := divideWithRemainder(13, 10)
+	q, d, err := divideWithRemainder(13, 10)
 	if err != nil {
 		fmt.Println(err)
-	} else {
-		fmt.Println(quotient, remainder)
+	}
+	{
+		fmt.Printf("The quotient is %d and remainder is %d \n", q, d)
 	}
 }
